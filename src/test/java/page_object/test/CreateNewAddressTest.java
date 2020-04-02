@@ -76,22 +76,22 @@ public class CreateNewAddressTest {
         new NewAddressPage(driver).fillCityInputField(city);
     }
 
+    @And("User type (.*) in Phone field")
+    public void userTypePhoneInPhoneField(String phone) {
+        new NewAddressPage(driver).fillPhoneInputField(phone);
+    }
+
     @And("User selects (.*) from Country field")
     public void userSelectsCountryFromCountryField(String country) {
         new NewAddressPage(driver).selectCountry(country);
     }
 
 
-//    @And("User type (.*) in Phone field")
-//    public void userTypePhoneInPhoneField(String phone) {
-//        new NewAddressPage(driver).fillPhoneInputField(phone);
-//    }
-//
-//    @And("User submits form")
-//    public void userSubmitsForm() {
-//        new NewAddressPage(driver).clickSubmitField();
-//    }
-//
+    @And("User submits form")
+    public void userSubmitsForm() {
+        new NewAddressPage(driver).clickSubmitField();
+    }
+
 //    @Then("User sees information: (.*)")
 //    public void userSeesInformationAddressSuccessfullyAdded(String expectedInformation) {
 //        String actualInformation = new YourAddressesPage(driver).getInformation();

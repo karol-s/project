@@ -7,6 +7,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
 
+import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 public class NewAddressPage {
@@ -38,7 +39,7 @@ public class NewAddressPage {
     @FindBy (name = "phone")
     private WebElement phoneInputField;
 
-    @FindBy (name = "submitAddress")
+    @FindBy (xpath = "//form//footer/button")
     private WebElement submitField;
 
 
@@ -69,17 +70,21 @@ public class NewAddressPage {
     public void selectCountry(String country) {
         driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
         Select dropdown = new Select(driver.findElement(By.cssSelector(".form-control.form-control-select.js-country")));
-        dropdown.selectByVisibleText("United Kingdom");
+        dropdown.selectByValue("17");                           //nie dziala
+//        dropdown.selectByIndex(1);                            //nie dziala
+//        dropdown.selectByVisibleText("United Kingdom");       //nie dziala
+//        dropdown.selectByVisibleText(country);                //nie dziala
+
 
     }
 
-//    public void fillPhoneInputField(String phone) {
-//        phoneInputField.sendKeys(phone);
-//    }
-//
-//    public void clickSubmitField() {
-//        submitField.click();
-//    }
+    public void fillPhoneInputField(String phone) {
+        phoneInputField.sendKeys(phone);
+    }
+
+    public void clickSubmitField() {
+        submitField.click();
+    }
 
 
 }

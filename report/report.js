@@ -46,7 +46,11 @@ formatter.step({
   "keyword": "And "
 });
 formatter.step({
-  "name": "User selects \u003ccountry\u003e from Country field",
+  "name": "User type \u003cphone\u003e in Phone field",
+  "keyword": "And "
+});
+formatter.step({
+  "name": "User submits form",
   "keyword": "And "
 });
 formatter.examples({
@@ -176,14 +180,23 @@ formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "User selects United Kingdom from Country field",
+  "name": "User type 691351789 in Phone field",
   "keyword": "And "
 });
 formatter.match({
-  "location": "CreateNewAddressTest.userSelectsCountryFromCountryField(String)"
+  "location": "CreateNewAddressTest.userTypePhoneInPhoneField(String)"
 });
 formatter.result({
-  "error_message": "java.lang.NullPointerException\n\tat page_object.page.NewAddressPage.selectCountry(NewAddressPage.java:70)\n\tat page_object.test.CreateNewAddressTest.userSelectsCountryFromCountryField(CreateNewAddressTest.java:81)\n\tat ✽.User selects United Kingdom from Country field(src/test/resources/features/addNewAddress.feature:13)\n",
-  "status": "failed"
+  "status": "passed"
+});
+formatter.step({
+  "name": "User submits form",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "CreateNewAddressTest.userSubmitsForm()"
+});
+formatter.result({
+  "status": "passed"
 });
 });

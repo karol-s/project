@@ -10,9 +10,9 @@ Feature: Add New Address
     And User type <address> in Address field
     And User type <codezip/postal code> in CodeZip/Postal Code field
     And User type <city> in City field
-    And User selects <country> from Country field
-#    And User type <phone> in Phone field
-#    And User submits form
+    And User type <phone> in Phone field
+#    And User selects <country> from Country field
+    And User submits form
 #    Then User sees information: <Address successfully added!>
     Examples:
       | alias | company | vat number | address    | codezip/postal code | city   | country        | phone     |
