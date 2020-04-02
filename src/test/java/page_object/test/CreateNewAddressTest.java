@@ -86,11 +86,12 @@ public class CreateNewAddressTest {
         new NewAddressPage(driver).selectCountry(country);
     }
 
-
     @And("User submits form")
     public void userSubmitsForm() {
         new NewAddressPage(driver).clickSubmitField();
     }
+
+
 
 //    @Then("User sees information: (.*)")
 //    public void userSeesInformationAddressSuccessfullyAdded(String expectedInformation) {

@@ -11,7 +11,7 @@ Feature: Add New Address
     And User type <codezip/postal code> in CodeZip/Postal Code field
     And User type <city> in City field
     And User type <phone> in Phone field
-#    And User selects <country> from Country field
+    And User selects <country> from Country field
     And User submits form
 #    Then User sees information: <Address successfully added!>
     Examples:

@@ -74,9 +74,8 @@ public class NewAddressPage {
 //        dropdown.selectByIndex(1);                            //nie dziala
 //        dropdown.selectByVisibleText("United Kingdom");       //nie dziala
 //        dropdown.selectByVisibleText(country);                //nie dziala
-
-
     }
+
 
     public void fillPhoneInputField(String phone) {
         phoneInputField.sendKeys(phone);

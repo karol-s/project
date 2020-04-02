@@ -50,6 +50,10 @@ formatter.step({
   "keyword": "And "
 });
 formatter.step({
+  "name": "User selects country",
+  "keyword": "And "
+});
+formatter.step({
   "name": "User submits form",
   "keyword": "And "
 });
@@ -190,6 +194,17 @@ formatter.result({
   "status": "passed"
 });
 formatter.step({
+  "name": "User selects country",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "CreateNewAddressTest.userSelectsCountry()"
+});
+formatter.result({
+  "error_message": "java.lang.NullPointerException\n\tat page_object.page.NewAddressPage.userSelectCountry(NewAddressPage.java:80)\n\tat page_object.test.CreateNewAddressTest.userSelectsCountry(CreateNewAddressTest.java:91)\n\tat ✽.User selects country(src/test/resources/features/addNewAddress.feature:14)\n",
+  "status": "failed"
+});
+formatter.step({
   "name": "User submits form",
   "keyword": "And "
 });
@@ -197,6 +212,6 @@ formatter.match({
   "location": "CreateNewAddressTest.userSubmitsForm()"
 });
 formatter.result({
-  "status": "passed"
+  "status": "skipped"
 });
 });
